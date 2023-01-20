@@ -25,10 +25,15 @@ form.onsubmit = event => {
 }
 
 function displayResultMessage(result) {
-    AlertError.close();
     Modal.message.innerText = `Seu IMC é de ${result}`;
     Modal.open();
 }
 
+function handleInput() {
+    if (AlertError.element.classList.contains('open')) {
+        AlertError.close();
+    }
+}
 
-
+inputWeight.addEventListener('input', handleInput)
+inputHeight.addEventListener('input', handleInput)

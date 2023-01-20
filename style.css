@@ -160,9 +160,15 @@ form button:hover {
 
 /* alert error */
 .alert-error.open {
+    transform: translateY(0);
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+}
+
+.alert-error.close {
+    transform: translateY(-50px);
+    opacity: 0;
+    visibility: hidden;
 }
 
 .alert-error {
@@ -176,8 +182,6 @@ form button:hover {
     padding: 0.8rem 0;
     font-weight: bold;
 
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(-30px);
-    transition: transform .5s;
+    transform: translateY(-50px);
+    transition: all .5s;
 }
